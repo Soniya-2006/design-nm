@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Context Aware Access Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Context-Aware Access Control System</h1>
+
+<div class="form-box">
+
+    <label>Username</label>
+    <input type="text" id="username" placeholder="Enter username">
+
+    <label>User Role</label>
+    <select id="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <label>Device Security</label>
+    <select id="device">
+        <option value="secure">Secure Device</option>
+        <option value="unsecure">Unsecure Device</option>
+    </select>
+
+    <label>Location</label>
+    <select id="location">
+        <option value="office">Office Network</option>
+        <option value="external">External Network</option>
+    </select>
+
+    <label>Application Risk</label>
+    <select id="risk">
+        <option value="low">Low</option>
+        <option value="high">High</option>
+    </select>
+
+    <div class="buttons">
+        <button onclick="checkAccess()">Check Access</button>
+        <button onclick="clearLog()">Clear Log</button>
+    </div>
+
+    <h2 id="result"></h2>
+
+</div>
+
+<div class="log-box">
+
+    <h3>Access History</h3>
+
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>User</th>
+            <th>Status</th>
+        </tr>
+        <tbody id="logTable"></tbody>
+    </table>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
